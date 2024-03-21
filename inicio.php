@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
 </head>
+
 <header>
     <nav>
         <a href="inicio.php">Início</a>
@@ -34,9 +35,9 @@
     <h1>70 Anos Experiência | 70 000 Clientes Satisfeitos | 33% Poupanças nos Custos</h1>
     <hr>
     <h2>O que nos distingue como Empresa de Limpezas? | Equipas Qualificadas e Comprometidas</h2>
-    <h3>Investimos na formação regular e contínua das nossas equipas, as quais não só são qualificadas e experientes, mas também atentas às necessidades específicas dos nossos clientes, sendo reconhecidas pela sua qualidade.</h3>
+    Investimos na formação regular e contínua das nossas equipas, as quais não só são qualificadas e experientes, mas também atentas às necessidades específicas dos nossos clientes, sendo reconhecidas pela sua qualidade.
     <h2>Flexibilidade Horária</h2>
-    <h3>Estamos disponíveis 24 horas por dia, 7 dias por semana, para garantir que os seus espaços se encontram sempre impecáveis. Adaptamo-nos à rotina de cada empresa garantindo assim a máxima conveniência e satisfação dos nossos clientes.</h3>
+    Estamos disponíveis 24 horas por dia, 7 dias por semana, para garantir que os seus espaços se encontram sempre impecáveis. Adaptamo-nos à rotina de cada empresa garantindo assim a máxima conveniência e satisfação dos nossos clientes.
 </body>
 
 <footer>
