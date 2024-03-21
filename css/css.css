@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #e6e6e6;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+header{
+    background-color: cornflowerblue;
+    position: fixed;
+    padding: 0 2rem;
+    z-index: 1;
+    width: 100%;
+}
+
+.navbar{
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img{
+    width: 90px;
+    height: 75px;
+}
+
+.navbar .links {
+    display: flex;
+
+}
+
+.navbar .links a{
+    color: white;
+    padding: 19px;
+    transition: all .5s ease-in-out;
+}
+
+.navbar .links a:hover{
+    background-color: rgb(61, 121, 231);
+    color: #fff;
+
+}
+
+section{
+    position: relative;
+    left: 5%;
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+section h2{
+    padding-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: cornflowerblue   ;
+}
+
+section h3{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: cornflowerblue   ;
+}
+
+section h4{
+    margin: 0px 15px;
+    text-align: justify;
+}
