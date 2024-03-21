@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcação</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  select, #empregados, #servicos {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #26a9bb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #2b68be;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Adicionando estilo personalizado */
+    background-color: #ffffff;
+    color: #555555;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="date"]:focus {
+    border-color: #26a9bb; /* Altere a cor para combinar com o tema do seu site */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <label for="data">Selecione a data:</label>
+  <input type="date" id="data" name="data">
+  <br><br>
+  <label for="horario">Selecione o horário:</label>
+  <select id="horario">
+    <option value="9:00">9:00</option>
+    <option value="10:00">10:00</option>
+    <option value="11:00">11:00</option>
+    <option value="12:00">12:00</option>
+    <option value="13:00">13:00</option>
+    <option value="14:00">14:00</option>
+    <option value="15:00">15:00</option>
+    <option value="16:00">16:00</option>
+    <option value="17:00">17:00</option>
+    <option value="18:00">18:00</option>
+  </select>
+
+  <label for="empregados">Selecione o empregado:</label>
+  <select id="empregados">
+    <option value="Qualquer">Qualquer...</option>
+    <option value="Vasco">Vasco</option>
+    <option value="Khomyk">Khomyk</option>
+    <option value="Gomes">Gomes</option>
+    <option value="Pais">Pais</option>
+    <option value="Rudy">Rudy</option>
+    <option value="Santos">Santos</option>
+    <option value="Alfarroba">Alfarroba</option>
+    <option value="Tomoiaga">Tomoiaga</option>
+  </select>
+
+  <label for="servicos">Tipo de serviço de limpeza:</label>
+  <select id="servicos">
+    <option value="Externo">Limpeza externa de vidros</option>
+    <option value="Interno">Limpeza interna de vidros</option>
+    <option value="Ambos">Limpeza interna e externa de vidros</option>
+    <option value="Outros">Outros serviços</option>
+  </select>
+
+  <label for="nome">Nome do cliente:</label>
+  <input type="text" id="nome" placeholder="Digite o nome do cliente">
+
+  <button onclick="adicionarMarcacao()">Adicionar Marcação</button>
+
+  <table id="tabela-marcacoes">
+    <caption>Horário de Marcação</caption>
+    <thead>
+      <tr>
+        <th>Horário</th>
+        <th>Empregado</th>
+        <th>Tipo de Serviço</th>
+        <th>Cliente</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function adicionarMarcacao() {
+    var horarioSelecionado = document.getElementById("horario").value;
+    var empregadoSelecionado = document.getElementById("empregados").value;
+    var tipoServico = document.getElementById("servicos").value;
+    var nomeCliente = document.getElementById("nome").value;
+    var dataSelecionada = document.getElementById("data").value; // Adicionando a captura da data selecionada
+
+    // Validando se todos os campos estão preenchidos
+    if (horarioSelecionado === "" || empregadoSelecionado === "Qualquer" || tipoServico === "" || nomeCliente === "" || dataSelecionada === "") {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    var tabelaMarcacoes = document.getElementById("tabela-marcacoes").getElementsByTagName('tbody')[0];
+    var newRow = tabelaMarcacoes.insertRow();
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+    var cell4 = newRow.insertCell(3);
+    var cell5 = newRow.insertCell(4); // Adicionando uma nova célula para exibir a data
+    cell1.innerHTML = horarioSelecionado;
+    cell2.innerHTML = empregadoSelecionado;
+    cell3.innerHTML = tipoServico;
+    cell4.innerHTML = nomeCliente;
+    cell5.innerHTML = dataSelecionada; // Adicionando a data selecionada pelo cliente
+}
+
+</script>
+
+</body>
+</html>
