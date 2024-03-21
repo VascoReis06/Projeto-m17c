@@ -40,6 +40,6 @@
 </body>
 
 <footer>
-        <p>Este é o rodapé do site.</p>
-    </footer>
+    © 2024 TVR-Limpezas Portugal - Todos os direitos reservados.
+</footer>
 </html>
