@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-box {
+    width: 500px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(17, 247, 255, 0.568);
+    padding-right: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: cornflowerblue;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: cornflowerblue;
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: calc(100% - 22px); /* Adjusted width to account for padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+input[type="submit"] {
+    background-color: cornflowerblue;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #6495ED;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

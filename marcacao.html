@@ -97,12 +97,12 @@ input[type="date"]:focus {
 <body>
 
 <div class="container">
-  
+  <form action="processar_marcacao.php" method="post">
   <label for="data">Selecione a data:</label>
   <input type="date" id="data" name="data">
   <br><br>
   <label for="horario">Selecione o horário:</label>
-  <select id="horario">
+  <select id="horario" name="horario">
     <option value="9:00">9:00</option>
     <option value="10:00">10:00</option>
     <option value="11:00">11:00</option>
@@ -116,7 +116,7 @@ input[type="date"]:focus {
   </select>
 
   <label for="empregados">Selecione o empregado:</label>
-  <select id="empregados">
+  <select id="empregados" name="empregado">
     <option value="Qualquer">Qualquer...</option>
     <option value="Vasco">Vasco</option>
     <option value="Khomyk">Khomyk</option>
@@ -129,7 +129,7 @@ input[type="date"]:focus {
   </select>
 
   <label for="servicos">Tipo de serviço de limpeza:</label>
-  <select id="servicos">
+  <select id="servicos" name="servicos">
     <option value="Externo">Limpeza externa de vidros</option>
     <option value="Interno">Limpeza interna de vidros</option>
     <option value="Ambos">Limpeza interna e externa de vidros</option>

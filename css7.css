@@ -1,0 +1,72 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos do formulário de login */
+.login-box {
+    width: 500px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(17, 247, 255, 0.568);
+}
+
+/* Estilos do cabeçalho */
+h1 {
+    text-align: center;
+    color: cornflowerblue;
+    margin-bottom: 20px;
+}
+
+/* Estilos para os rótulos */
+label {
+    font-weight: bold;
+    color: cornflowerblue;
+    display: block;
+}
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: calc(100% - 22px); /* Largura ajustada para considerar o preenchimento */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+    box-sizing: border-box; /* Garante que o preenchimento está incluído na largura */
+}
+
+/* Estilos para o botão de envio */
+input[type="submit"] {
+    background-color: cornflowerblue;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #6495ED;
+}
+
+/* Estilos para o parágrafo de informações */
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Estilos para links */
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
